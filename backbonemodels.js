@@ -79,10 +79,10 @@
        this.votes.add( vote_model );
      },
 
-     findLength: function() {
-       return this.votes.length;
+     //findLength: function() {
+     //  return this.votes.length;
 
-     }
+     //}
      showPrompt: function () {
        //var vote_model = new Vote({ upvotedby: 'user2' });
        //this.votes.add( vote_model );
@@ -94,7 +94,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + this.findlength() + "</li>");
+       $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
        //possibly change the append to something like a "change" function
      },
 
