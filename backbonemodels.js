@@ -76,7 +76,7 @@
       "click #upvote-button": "showPrompt2",
      },
      
-     increaseCounter: {
+     increaseCounter: function () {
        this.tempvar = this.tempvar + 1;
      }
 
