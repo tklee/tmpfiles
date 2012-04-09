@@ -66,7 +66,7 @@
      el: $("body"),
      initialize: function () {
        this.friends = new Friends( null, { view: this });
-       this.tempvar = 0;
+       //this.tempvar = 0;
 
        this.votes = new Votes( null, { view: this });
       // this.tempvar = this.votes.length;
@@ -78,9 +78,9 @@
       "click #upvote-button": "showPrompt2",
      },
      
-     increaseCounter: function () {
+     //increaseCounter: function () {
        //tempvar2 = tempvar2 + 1;
-     }
+     //}
 
      showPrompt2: function () {
        var vote_model = new Vote({ upvotedby: 'user2' });
