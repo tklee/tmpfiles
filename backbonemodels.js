@@ -66,6 +66,7 @@
 
        this.votes = new Votes( null, { view: this });
        this.tempvar = this.votes.length;
+       console.log(this.votes.length);
      },
 
      events: {    
