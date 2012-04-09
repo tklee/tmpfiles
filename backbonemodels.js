@@ -47,7 +47,7 @@
    });
 
    Votes = Backbone.Collection.extend({
-
+     howmany: 0
      initialize: function (models, options) {
        this.bind("add", options.view.increaseVotes);
 
