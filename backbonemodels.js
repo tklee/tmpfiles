@@ -69,13 +69,18 @@
 
      events: {    
       "click #add-friend":  "showPrompt",
-      "click #upvote-button": "showPrompt",
+      "click #upvote-button": "showPrompt2",
      },
      
-
-     showPrompt: function () {
+     showPrompt2: function () {
        var vote_model = new Vote({ upvotedby: 'user2' });
        this.votes.add( vote_model );
+     },
+
+
+     showPrompt: function () {
+       //var vote_model = new Vote({ upvotedby: 'user2' });
+       //this.votes.add( vote_model );
 
        var friend_name = prompt("Who is your friend?");
        var friend_model = new Friend({ name: friend_name });
