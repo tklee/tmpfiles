@@ -13,7 +13,7 @@
     initialize: function (models, options) {
       this.bind("add", options.view.addFriendLi);
       //Listen for new additions to the collection and call a view function if so
-      this.bind("add", options.view.increaseCounter);
+      //this.bind("add", options.view.increaseCounter);
     }
   });
   
