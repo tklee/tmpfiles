@@ -59,13 +59,13 @@
    });
 
    AppView2 = Backbone.View.extend({
-
+     tempvar: 0,
      el: $("body"),
      initialize: function () {
        this.friends = new Friends( null, { view: this });
 
        this.votes = new Votes( null, { view: this });
-
+       this.tempvar = this.votes.length;
      },
 
      events: {    
@@ -90,7 +90,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + this.votes.length + "</li>");
+       $("#vote-count").append("<li>" + this.tempvar + "</li>");
        //possibly change the append to something like a "change" function
      },
 
