@@ -102,7 +102,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
+       $("#vote-count").append("<li>" + tempvar2 + "</li>");
        //possibly change the append to something like a "change" function
      },
 
