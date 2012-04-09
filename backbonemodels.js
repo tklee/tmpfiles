@@ -47,7 +47,6 @@
    });
 
    Votes = Backbone.Collection.extend({
-     howmany: 0
      initialize: function (models, options) {
        this.bind("add", options.view.increaseVotes);
 
@@ -91,7 +90,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
+       $("#vote-count").append("<li>" + model.get(this.votes.length) + "</li>");
        //possibly change the append to something like a "change" function
      },
 
