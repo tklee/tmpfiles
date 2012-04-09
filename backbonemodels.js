@@ -90,7 +90,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + model.get(this.votes.length) + "</li>");
+       $("#vote-count").append("<li>" + this.votes.length + "</li>");
        //possibly change the append to something like a "change" function
      },
 
