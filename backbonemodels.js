@@ -11,6 +11,7 @@
     initialize: function (models, options) {
       this.bind("add", options.view.addFriendLi);
       //Listen for new additions to the collection and call a view function if so
+      this.bind("add", options.view.increaseCounter);
     }
   });
   
@@ -63,6 +64,7 @@
      el: $("body"),
      initialize: function () {
        this.friends = new Friends( null, { view: this });
+       this.tempvar = 0;
 
        this.votes = new Votes( null, { view: this });
       // this.tempvar = this.votes.length;
@@ -74,6 +76,10 @@
       "click #upvote-button": "showPrompt2",
      },
      
+     increaseCounter: {
+       this.tempvar = this.tempvar + 1;
+     }
+
      showPrompt2: function () {
        var vote_model = new Vote({ upvotedby: 'user2' });
        this.votes.add( vote_model );
@@ -92,9 +98,9 @@
        //Add a new friend model to our friend collection
        this.friends.add( friend_model );
      },
-     increaseVotes: function (collection) {
+     increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + collection.length + "</li>");
+       $("#vote-count").append("<li>" + this.tempvar + "</li>");
        //possibly change the append to something like a "change" function
      },
 
