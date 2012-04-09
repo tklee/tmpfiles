@@ -59,14 +59,14 @@
    });
 
    AppView2 = Backbone.View.extend({
-     tempvar: 0,
+     //tempvar: 0,
      el: $("body"),
      initialize: function () {
        this.friends = new Friends( null, { view: this });
 
        this.votes = new Votes( null, { view: this });
-       this.tempvar = this.votes.length;
-       console.log(this.votes.length);
+      // this.tempvar = this.votes.length;
+       
      },
 
      events: {    
@@ -79,7 +79,10 @@
        this.votes.add( vote_model );
      },
 
+     findLength: function() {
+       return this.votes.length;
 
+     }
      showPrompt: function () {
        //var vote_model = new Vote({ upvotedby: 'user2' });
        //this.votes.add( vote_model );
@@ -91,7 +94,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + this.tempvar + "</li>");
+       $("#vote-count").append("<li>" + this.findlength() + "</li>");
        //possibly change the append to something like a "change" function
      },
 
