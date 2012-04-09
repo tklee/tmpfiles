@@ -1,7 +1,7 @@
 
 (function ($) {
 
-  tempvar2 = 0;
+//  tempvar2 = 0;
   
   Friend = Backbone.Model.extend({
     //Create a model to hold friend atribute
@@ -79,7 +79,7 @@
      },
      
      increaseCounter: function () {
-       tempvar2 = tempvar2 + 1;
+       //tempvar2 = tempvar2 + 1;
      }
 
      showPrompt2: function () {
@@ -102,7 +102,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + tempvar2 + "</li>");
+       $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
        //possibly change the append to something like a "change" function
      },
 
