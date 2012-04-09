@@ -79,7 +79,7 @@
      },
      
      increaseCounter: function () {
-       this.tempvar = this.tempvar + 1;
+       tempvar2 = tempvar2 + 1;
      }
 
      showPrompt2: function () {
@@ -102,7 +102,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + this.tempvar + "</li>");
+       $("#vote-count").append("<li>" + tempvar2 + "</li>");
        //possibly change the append to something like a "change" function
      },
 
