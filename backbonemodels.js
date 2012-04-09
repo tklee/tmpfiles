@@ -92,9 +92,9 @@
        //Add a new friend model to our friend collection
        this.friends.add( friend_model );
      },
-     increaseVotes: function (model) {
+     increaseVotes: function (collection) {
 
-       $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
+       $("#vote-count").append("<li>" + collection.length + "</li>");
        //possibly change the append to something like a "change" function
      },
 
