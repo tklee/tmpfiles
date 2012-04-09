@@ -53,6 +53,8 @@
 
      }
 
+     howmany: this.length
+
 
 
    });
@@ -89,7 +91,7 @@
      },
      increaseVotes: function (model) {
 
-       $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
+       $("#vote-count").append("<li>" + model.get('howmany') + "</li>");
        //possibly change the append to something like a "change" function
      },
 
