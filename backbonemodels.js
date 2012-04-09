@@ -103,7 +103,9 @@
      increaseVotes: function (model) {
        tempvar2 = tempvar2 + 1;
 
-       //$("#vote-count").remove();
+       $("#vote-count").remove();
+
+       $("#vote-count").add();
        $("#vote-count").append("<li>" + tempvar2 + "</li>");
        //possibly change the append to something like a "change" function
      },
