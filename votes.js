@@ -11,7 +11,7 @@
      initialize: function (models, options) {
        this.bind("add", options.view.increaseVotes);
 
-     },
+     }
 
 
 
@@ -32,15 +32,19 @@
      
 
      showPrompt: function () {
-       var vote_model = new Vote({ upvotedby: "user2" });
+       var vote_model = new Vote({ upvotedby: 'user2' });
        this.votes.add( vote_model );
 
-     }
+     },
      increaseVotes: function (model) {
 
        $("#vote-count").append("<li>" + model.get('upvotedby') + "</li>");
        //possibly change the append to something like a "change" function
      }
+
+
+     //increaseVotes: function (collection) {
+     //$("#vote-count").append("<li>" + collection.length + "</li>");
   });
   
   var appview2 = new AppView2;
