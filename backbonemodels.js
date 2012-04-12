@@ -103,7 +103,7 @@
      increaseVotes: function (model) {
        tempvar2 = tempvar2 + 1;
 
-       if (tempvar > 3) { $("#vote-count").remove("<li></li>"); }
+       if (tempvar2 > 3) { $("#vote-count").remove("<li></li>"); }
 
 //       $("#vote-count").add();
        $("#vote-count").append("<li>" + tempvar2 + "</li>");
