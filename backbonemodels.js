@@ -1,7 +1,8 @@
+var tempvar2 = 0;
 
 (function ($) {
 
-  var tempvar2 = 0;
+  //tempvar2 = 0;
   
   Friend = Backbone.Model.extend({
     //Create a model to hold friend atribute
