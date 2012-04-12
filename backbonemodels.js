@@ -111,10 +111,11 @@
       if (tempvar2 < 6) {  $("#vote-count").append("<li>" + tempvar2 + "</li>");  }
 
       else {
-      //  $("#vote-count").append("<ul id=\"vote count\"><li>" + tempvar2 + "<li><");
-        $("#vote-count").append("<li>" + tempvar2 + "</li>");
+//        $("#vote-count").append("<ul id=\"vote count\"><li>" + tempvar2 + "</li></ul>");
+//        $("#vote-count").append("<li>" + tempvar2 + "</li>");
         $("#vote-count").replaceWith("<li>" + tempvar2 + "</li>");
       
+        $("#vote-count").append("<ul id=\"vote-count\"><li>" + tempvar2 + "</li></ul>");
       }
       
        //possibly change the append to something like a "change" function
