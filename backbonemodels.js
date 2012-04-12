@@ -111,7 +111,8 @@
       if (tempvar2 < 6) {  $("#vote-count").append("<li>" + tempvar2 + "</li>");  }
 
       else {
-        $("#vote-count").append("<li>" + tempvar2 + "<li>");
+      //  $("#vote-count").append("<ul id=\"vote count\"><li>" + tempvar2 + "<li><");
+        $("#vote-count").append("<li>" + tempvar2 + "</li>");
         $("#vote-count").replaceWith("<li>" + tempvar2 + "</li>");
       
       }
