@@ -1,8 +1,6 @@
-var tempvar2 = 0;
-
 (function ($) {
 
-  //tempvar2 = 0;
+  tempvar2 = 0;
   
   Friend = Backbone.Model.extend({
     //Create a model to hold friend atribute
@@ -110,7 +108,10 @@ var tempvar2 = 0;
 //
 //       if (tempvar2 > 3) { $("#vote-count").remove("<li></li>"); }
 //
-//       $("#vote-count").append("<li>" + tempvar2 + "</li>");
+      if (tempvar2 < 2) {  $("#vote-count").append("<li>" + tempvar2 + "</li>");  }
+
+      if (tempvar2 >= 2) {  $("#vote-count").replaceWith("<li>" + tempvar2 + "</li>"); }
+      
        //possibly change the append to something like a "change" function
      },
 
