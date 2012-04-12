@@ -108,7 +108,7 @@
 //
 //       if (tempvar2 > 3) { $("#vote-count").remove("<li></li>"); }
 //
-      if (tempvar2 < 2) {  $("#vote-count").append("<li>" + tempvar2 + "</li>");  }
+      if (tempvar2 < 6) {  $("#vote-count").append("<li>" + tempvar2 + "</li>");  }
 
       else {  $("#vote-count").replaceWith("<li>" + tempvar2 + "</li>"); }
       
